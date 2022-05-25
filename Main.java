@@ -42,14 +42,14 @@ class Ship extends Transportation{
 public class Main {
 
     public static void main(String[] args) {
-        TransportationFatory truckDelivery = new TruckFactory();
         TransportationFatory airplaneDelivery = new AirplaneFactory();
-        Transportation truckDel = truckDelivery.createTransport();
+        TransportationFatory truckDelivery = new TruckFactory();
+        TransportationFatory oceanDelivery = new ShipFactory();
         Transportation airDel = airplaneDelivery.createTransport();
-        TransportationFatory oceanDelivery = new TruckFactory();
-        Transportation oceanDel = truckDelivery.createTransport();
-        System.out.println(truckDel);
+        Transportation truckDel = truckDelivery.createTransport();
+        Transportation oceanDel = oceanDelivery.createTransport();
         System.out.println(airDel);
+        System.out.println(truckDel);
         System.out.println(oceanDel);
 
     }
